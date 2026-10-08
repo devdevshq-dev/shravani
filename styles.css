@@ -12,4 +12,76 @@ html[data-power=bubbles]{--accent:#1375ad;--soft:#d8efff;--page:#f0f8ff}html[dat
 @media(max-width:1000px){.wrap{width:calc(100% - 48px)}.hero{padding-top:48px}.hero-art{width:110%}.orbit{width:350px;height:350px}.orbit-two{width:290px;height:290px}.sticker-bottom{bottom:70px;left:0;font-size:.75rem;padding:13px 19px}.sticker-top{top:24px;font-size:.75rem;right:4px}.sticker-top strong{font-size:.75rem}.star-one{left:15px}.star-two{right:0}.hero-actions{gap:11px}.hero-actions .button{padding:10px 15px;font-size:.8rem}.about{gap:35px}.power-card{padding:23px}.power-card h3{font-size:1.3rem}.picker-hint{display:none}.experience-layout{gap:40px}.section{padding-block:75px}.powers{gap:15px}.project-visual{padding-inline:20px}.flow-node{font-size:.75rem}.flow-node span{font-size:.75rem}.flow-core{font-size:.95rem}.flow-line{width:12px}.footer{gap:15px}}
 @media(max-width:720px){.header nav{gap:18px}.hero{grid-template-columns:1fr;padding-top:36px}.hero-copy{max-width:600px}h1{font-size:clamp(3.5rem,11vw,5.3rem)}.hero-description{max-width:480px}.hero-visual{min-height:330px;margin:15px auto 0;width:100%;max-width:480px}.hero-art{width:100%;max-height:370px}.orbit{width:310px;height:310px}.orbit-two{width:260px;height:260px}.sticker-top{top:10px;right:15px}.sticker-bottom{bottom:12px;left:6px}.star-one{top:30px;left:15px}.star-two{bottom:35px;right:0}.power-picker{margin-top:18px;gap:13px;flex-wrap:wrap}.picker-label{width:100%}.about{grid-template-columns:1fr;gap:22px;padding-bottom:32px}.about-copy{padding-top:0}.powers{grid-template-columns:1fr}.power-card{padding:23px}.power-card h3{margin-top:20px;font-size:1.5rem}.power-card .tags{margin-top:16px}.power-symbol{top:24px}.power-card p{max-width:480px}.section-heading{align-items:flex-start;flex-direction:column;gap:24px}.section-aside br{display:none}.project-grid{grid-template-columns:1fr}.project-small{grid-column:auto}.project-decoration{font-size:4rem;margin:0 23px}.project-small .project-content{padding-right:0}.experience-layout{grid-template-columns:1fr;gap:40px}.contact-layout{align-items:flex-start;flex-direction:column;gap:27px}.contact-actions{align-items:flex-start;flex-direction:row;flex-wrap:wrap;padding:0;gap:24px}.contact-actions .text-link{align-self:center}.footer{flex-wrap:wrap}.footer p{order:3;width:100%}.section{padding-block:60px}}
 @media(max-width:480px){.wrap{width:calc(100% - 36px)}.header{padding-block:18px;position:relative}.header .wordmark{font-size:1.5rem}.menu-toggle{display:block;border:1.5px solid var(--ink);border-radius:100px;background:var(--yellow);font-size:.8rem;font-weight:700;padding:6px 15px}.header nav{display:none;position:absolute;top:75px;left:0;right:0;background:white;border:var(--line);border-radius:10px;padding:20px;z-index:10;box-shadow:4px 4px 0 var(--ink);flex-wrap:wrap;gap:20px}.header nav.is-open{display:flex}.header .nav-contact{padding:6px 13px}.hero .eyebrow{font-size:.75rem;letter-spacing:.08em;margin-bottom:20px}.hero-description{font-size:.95rem}.hero-actions .button{padding:10px 14px;font-size:.78rem;gap:12px}.hero-visual{min-height:290px}.hero-art{max-height:310px}.orbit{width:260px;height:260px}.orbit-two{width:225px;height:225px}.sticker-top{right:0;top:14px}.star-one{font-size:2.8rem}.star-two{font-size:2.6rem;bottom:35px}.power-button{font-size:.75rem;padding:7px 10px}.picker-buttons{gap:7px}.eyebrow{font-size:.75rem}.project-visual{min-height:220px;padding-inline:15px}.project-content{padding:23px}.project h3{font-size:1.6rem}.flow-node{padding:16px 4px;font-size:.75rem}.flow-core{font-size:.9rem}.flow-node span{font-size:.75rem}.flow-line{width:10px}.inventory-preview{width:90%}.project-decoration{display:none}.project-small .project-content{padding-right:23px}.job-topline{flex-wrap:wrap;gap:7px}.desktop-break{display:none}.contact-actions{gap:22px}.contact-actions .button{min-width:165px}.contact h2{font-size:2.4rem}.footer>a:last-child{margin-left:auto}}
+/* SVG hearts inherit the chosen power color, including on phone browsers. */
+.brand-heart{width:1em;height:1em;display:block;flex-shrink:0;color:var(--accent);transition:color .2s}
+.hero-art{height:auto}
+.hero-copy,.section-intro,.about-copy,.project,.experience-detail{min-width:0}
+
+@media(max-width:720px){
+  .header{position:relative;padding-block:16px}
+  .menu-toggle{display:block;min-height:44px;border:1.5px solid var(--ink);border-radius:100px;background:var(--yellow);font-size:.9rem;font-weight:700;padding:8px 18px}
+  .header nav{display:none;position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:10;background:white;border:var(--line);border-radius:12px;padding:12px;box-shadow:4px 4px 0 var(--ink);gap:8px;grid-template-columns:1fr 1fr}
+  .header nav.is-open{display:grid}
+  .header nav a{min-height:44px;display:flex;align-items:center;justify-content:center;padding:8px;font-size:.95rem}
+  .header .nav-contact{margin:3px;box-shadow:2px 2px 0 var(--ink)}
+  .hero{padding-top:30px}
+  .hero .eyebrow{align-items:flex-start;line-height:1.7;letter-spacing:.07em}
+  h1{font-size:clamp(2.75rem,11.5vw,4.75rem);line-height:1.04}
+  h2,.contact h2{font-size:clamp(2rem,7.5vw,3rem);line-height:1.12}
+  .hero-description{font-size:1rem;margin-top:22px}
+  .hero-actions{gap:12px;margin-top:24px}
+  .hero-actions .button{font-size:.9rem;flex:1 1 170px;padding:12px 16px}
+  .location{font-size:.85rem;line-height:1.8;margin-top:22px}
+  .location span{margin-inline:6px}
+  /* Keep the illustration between two independent rows of stickers. */
+  .hero-visual{display:grid;grid-template-columns:minmax(0,1fr);justify-items:center;gap:18px;min-height:0;margin:28px auto 0;padding:0}
+  .hero-art{grid-column:1;grid-row:2;width:100%;max-width:100%;height:auto;max-height:none;aspect-ratio:4/3;animation:none}
+  .hero-sticker{position:static;grid-column:1;max-width:calc(100% - 48px);transform:none}
+  .sticker-top{grid-row:1;justify-self:start;padding:10px 16px;border-radius:8px}
+  .sticker-top strong{font-size:.82rem}
+  .sticker-bottom{grid-row:3;justify-self:start;padding:13px 20px;font-size:.85rem}
+  .orbit{top:50%;left:50%;width:min(80%,310px);height:auto;aspect-ratio:1;transform:translate(-50%,-50%);max-height:none}
+  .orbit-two{width:min(68%,260px);transform:translate(-50%,-50%) rotate(-15deg)}
+  .star-one{top:6px;left:auto;right:8px;font-size:2.4rem}
+  .star-two{bottom:6px;right:4px;font-size:2rem}
+  .power-picker{margin-top:26px;padding-block:20px;gap:12px}
+  .picker-label{font-size:.9rem}
+  .picker-buttons{display:flex;flex-wrap:wrap;width:100%;gap:10px}
+  .power-button{flex:1 1 90px;min-height:44px;font-size:.85rem;padding:10px 6px;white-space:nowrap}
+  .power-button:hover{transform:none}
+  .picker-hint{display:block;width:100%;margin:2px 0 0;font-size:.85rem}
+  .power-card p,.project-content>p:not(.project-type),.experience-list li,.contact-layout p{font-size:1rem;line-height:1.7}
+  .tags span{font-size:.8rem}
+  .project h3{font-size:1.6rem;line-height:1.2;overflow-wrap:anywhere}
+  .project summary{min-height:44px;font-size:.95rem;gap:14px}
+  .project summary span{flex-shrink:0}
+  .project details p{font-size:.95rem}
+  .text-link{display:inline-flex;align-items:center;min-height:44px;padding-block:8px}
+  .copy-button{min-height:44px;font-size:.875rem;padding:9px 14px}
+  .email-row{gap:12px;align-items:flex-start;font-size:1rem}
+  .email-row>a{flex-basis:100%;min-width:0}
+  .footer>a:last-child{min-height:44px;display:inline-flex;align-items:center;font-size:.85rem}
+  .marquee{padding-block:13px;font-size:.85rem}
+  .marquee span{padding-inline:22px}
+}
+@media(max-width:480px){
+  .hero-actions .button{flex-basis:100%}
+  .section{padding-block:48px}
+  .about{padding-bottom:28px}
+  .project-visual.migration-visual{padding:58px 18px 36px;min-height:320px}
+  .flow-diagram{flex-direction:column}
+  .flow-node{flex:none;width:80%;padding:12px 14px;font-size:.875rem}
+  .flow-node span{font-size:.8rem;margin-top:3px}
+  .flow-core{font-size:1rem;transform:none}
+  .flow-line{width:2px;height:18px}
+  .inventory-preview{width:100%;transform:none}
+  .inventory-row{font-size:.875rem;gap:8px}
+  .visual-caption{left:20px}
+  .impact-grid{gap:15px}
+  .impact-grid p{font-size:.875rem}
+  .job-location{font-size:.9rem;line-height:1.7}
+  .contact-actions{width:100%;flex-direction:column;align-items:stretch;gap:12px}
+  .contact-actions .text-link{align-self:flex-start}
+  .contact-actions .button{width:100%}
+}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}

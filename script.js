@@ -20,6 +20,16 @@ navigation.querySelectorAll('a').forEach(link => link.addEventListener('click', 
   menu.setAttribute('aria-expanded', 'false');
   navigation.classList.remove('is-open');
 }));
+document.addEventListener('click', event => {
+  if (navigation.classList.contains('is-open') && !navigation.contains(event.target) && !menu.contains(event.target)) {
+    navigation.classList.remove('is-open');
+    menu.setAttribute('aria-expanded', 'false');
+  }
+});
+window.matchMedia('(max-width: 720px)').addEventListener('change', () => {
+  navigation.classList.remove('is-open');
+  menu.setAttribute('aria-expanded', 'false');
+});
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && navigation.classList.contains('is-open')) {
     navigation.classList.remove('is-open');
